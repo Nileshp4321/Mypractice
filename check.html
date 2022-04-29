@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link src="check.js" />
+</head>
+<body id="bd">
+    <input id ="asdf"  type="color"/>
+    <button onclick="check()">color change</button>
+    <p></p>
+  
+    <script>
+      function check( )
+      {
+          let x=document.getElementById("asdf").value;
+        //   document.write(x);
+          let color=document.getElementById("bd")
+          color.style.backgroundColor=x;
+      }
+    </script>
+</body>
+</html>

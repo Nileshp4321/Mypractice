@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="api.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="api.css"/>
+    <script>
+        req=new XMLHttpRequest();
+        req.open("GET","https://api.themoviedb.org/3/movie/5/videos?api_key=d7bfc1b37be6a6e400e894166f688ae1&language=en-IN",true);
+
+     req.onreadystatechange=function(){
+     if(req.readyState==4&&req.status==200)
+     { if(req.readyState==4&&req.status==200)
+     {
+         let response=JSON.parse(req.responseText);
+         console.log(response);
+         let trailer=response.results;
+         let moviehtml="";
+         trailer.forEach(element => {
+
+            let movie=`
+            <div id="main">
+           <div>${element["name"]}
+           <div>${element["type"]}
+           <div>${element["site"]}</div>  </div>;   </div>      <div>`;
+
+        moviehtml+=movie; 
+            });
+      document.getElementById("container").innerHTML=moviehtml;      
+     }
+     else
+     {
+         console.log("Some error is occured");
+     }
+
+}
+
+}
+req.send();
+    </script>
+    <style>
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  
+   
+    <h1 id="Omega">Omega News</h1>
+    <div id="container"></div>
+ 
+</body>
+</html>

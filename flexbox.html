@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container
+      {
+          width:100%;
+          height: 500px;
+          border: 2px solid red;
+          display: flex;
+          /* flex-direction:row; */
+        flex-wrap: wrap;
+          /* justify-content:space-between; justify content is horizontal direction property*/
+          /* justify-content:space-aroung; */
+          /* justify-content:space-evenly; */
+          /* align-items:center;
+          align-items:flex-start; align for vertical direction property;
+          align-items:flex-end;  */
+          align-items: stretch;
+
+
+        
+      }
+      .item
+      {
+          width:200px;
+          height:200px;
+          background-color:darkgray;
+          border: 3px solid black;
+          margin:20px
+      }
+      #item-1
+      {
+          order:3;
+          flex-shrink: 3;
+          /* flex-grow:2; */
+      }
+      #item-2
+      { 
+          order:5;/*this property use to the order of item,high the order then the element is last end
+          flex-shrink: 3;
+          /* flex-grow:3; */
+        
+      }
+      #item-3
+      {
+          flex-shrink: 3;
+          /* flex-grow:4; */
+        
+      }
+      #item-4      
+      {
+          flex-shrink: 3;
+          /* flex-grow:5; */
+        
+      }
+      #item-     
+      {
+          flex-shrink: 3;
+          /* flex-grow:6; */
+        
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item" id="item-1">box1</div>
+    <div class="item" id="item-2">box2</div>
+    <div class="item" id="item-3">box3</div>
+    <div class="item" id="item-4">box4</div>
+    <div class="item" id="item-5">box5</div>
+</div>
+</body>
+</html>

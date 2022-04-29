@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li,
+        a {
+            color: white;
+            text-decoration: none;
+            float: left;
+            list-style: none;
+            padding: 6px;
+            margin-left: 2px;
+            border-radius: 6px;
+        }
+
+        li {
+            margin-left: 20px;
+
+        }
+
+        li:hover {
+            background-color: rgb(16, 185, 16);
+            border-radius: 8px;
+            text-decoration: underline;
+
+
+        }
+
+        ul {
+            background-color: rgba(252, 252, 252, 0.479);
+            position: fixed;
+            left: 110px;
+            top: -5px;
+            width: 1300px;
+            height: 50px;
+            padding: 6px;
+            border-radius: 40px;
+            opacity: 0.9;
+        }
+
+        input {
+            float: right;
+            margin-top: 10px;
+            margin-right: 50px;
+            border-radius: 20px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 10px;
+
+        }
+
+        .img {
+
+            float: right;
+            position: absolute;
+            left: 1270px;
+            top:22px;
+
+        }
+        .img:hover
+        {
+            transform:scale(1.2);
+        }
+
+        .search {
+            border: none;
+            background-color: #fff;
+            width: 230px;
+            padding: 8px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        .search:hover
+    {
+        transform: scale(1.05);
+    }
+
+        .div1 {
+
+            width: 500px;
+            position: absolute;
+            height: 400px;
+            padding: 50px;
+            border: 0.5px solid black;
+            background-color: black;
+            border-radius: 8px;
+            opacity: 0.8;
+            animation-name: div;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: linear;
+            animation-timing-function: ease-in-out;
+            box-sizing: inherit;
+
+
+        }
+
+        @keyframes div {
+            0% {
+                border-radius: 200px;
+            }
+
+            25% {
+                border-radius: 200px;
+            }
+
+            50% {
+                border-radius: 200px;
+            }
+
+            100% {
+                border-radius: 200px;
+            }
+
+        }
+
+        section {
+            margin: 80px 500px;
+
+        }
+
+        .username {
+            position: absolute;
+            left: 80px;
+            top: 150px;
+            font-size: 22px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .username:hover {
+            transform: scale(1.2);
+        }
+
+        .password {
+            color: white;
+            position: absolute;
+            left: 80px;
+            top: 200px;
+            font-size: 22px;
+            font-weight: bolder;
+        }
+
+        .password:hover {
+            transform: scale(1.2);
+        }
+
+        .cpassword {
+            color: white;
+            position: absolute;
+            left: 80px;
+            top: 250px;
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+
+        .cpassword:hover {
+            transform: scale(1.2);
+        }
+
+        .email {
+            color: white;
+            position: absolute;
+            left: 80px;
+            top: 300px;
+            font-size: 20px;
+            font-weight: bolder;
+
+        }
+
+        .email:hover {
+            transform: scale(1.2);
+        }
+
+        .usern1 {
+            position: absolute;
+            left: 250px;
+            top: 140px;
+            background-color: rgb(255, 254, 254);
+            /* margin-left:45px; */
+            width: 250px;
+
+        }
+
+        .usern1:hover {
+            transform: scale(1.2);
+        }
+
+
+        .usern2 {
+            position: absolute;
+            left: 250px;
+            top: 190px;
+            background-color: rgb(255, 255, 255);
+            /* margin-left:45px; */
+            width: 250px;
+        }
+
+        .usern2:hover {
+            transform: scale(1.2);
+        }
+
+        .usern3 {
+            position: absolute;
+            left: 250px;
+            top: 240px;
+            background-color: rgb(255, 254, 254);
+            /* margin-left:45px; */
+            width: 250px;
+
+        }
+
+        .usern3:hover {
+            transform: scale(1.2);
+        }
+
+
+        .usern4 {
+            position: absolute;
+            left: 250px;
+            top: 290px;
+            background-color: rgb(255, 255, 255);
+            /* margin-left:45px; */
+            width: 250px;
+        }
+
+        .usern4:hover {
+            transform: scale(1.2);
+        }
+
+        .login {
+            color: white;
+            background-color: rgba(32, 196, 40, 0.938);
+            position: absolute;
+            left: 250px;
+            top: 350px;
+            border: none;
+            font-size: 20px;
+            border-radius: 70px;
+            width: 100px;
+            height: 38px;
+            padding: 4px;
+            cursor: pointer;
+
+
+        }
+
+        .login:hover {
+            background-color: rgba(118, 247, 122, 0.911);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .signup {
+            background-color: rgba(212, 59, 59, 0.705);
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            top: 350px;
+            left: 380px;
+            width: 100px;
+            height: 38px;
+            border: none;
+            border-radius: 65px;
+        }
+
+        .signup:hover {
+            background-color: rgba(243, 127, 127, 0.911);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .button2 {
+
+            color: white;
+            background-color: rgb(16, 185, 16);
+            position: absolute;
+            left: 250px;
+            top: 350px;
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            border-radius: 70px;
+            width: 100px;
+            padding: 4px;
+        }
+
+
+
+        #account {
+            text-decoration: none;
+            color: white;
+            position: absolute;
+            top: 300px;
+            left: 150px;
+        }
+
+        .logo {
+            position: fixed;
+            top: 13px;
+            left: 5px;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            position: absolute;
+            top: 5px;
+            left: 200px;
+            color: white;
+            "
+
+        }
+    </style>
+</head>
+
+<body style="background-image:url('bg.jpg');">
+
+    <header class="header1">
+        <nav class="navbar">
+            <ul>
+                <img class="logo" src="logo.png" width="100px" />
+                <li><a href="naviagation.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <input type="search" class="search" placeholder="Search in website" />
+                <img src="search.png" class="img" width="22px" height="22px" alt="searchlogo" />
+            </ul>
+        </nav>
+    </header>
+    <form action="first.html" method="POST">
+        <section>
+            <div class="div1">
+                <h1>Sign Up</h1>
+                <label class="username"> Name</label>
+                <input type="text" class="usern1" placeholder="Enter your Username" required />
+                <label class="password">Password</label>
+                <input type="password" class="usern2" placeholder="Enter your Password" required />
+                <label class="cpassword">Confirm Password</label>
+                <input type="password" class="usern3" placeholder="Confirm your Password" required />
+                <label class="email">Email id</label>
+                <input type="email" class="usern4" placeholder="Enter your Email Id" required />
+                <button type="submit" class="signup" name="login" required>Sign Up</button>
+                <button type="submit" class="login" name="login">Login In</button>
+
+
+            </div>
+        </section>
+    </form>
+    <div>
+
+    </div>
+
+
+</body>
+
+</html>

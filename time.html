@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            color:rgb(231, 0, 0);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script>
+        function showTime()
+        {
+            time=new Date();
+            h=time.getHours();
+            m=time.getMinutes();
+            s=time.getSeconds();
+            h=h-12;
+            if(h<=9)
+            {
+                h="0"+h;
+            }
+            if(m<=9)
+            {
+                m="0"+m;
+            }
+            if(s<=9)
+            {
+                s="0"+s;
+            }
+            time=h+":"+m+":"+s;
+            document.getElementById('time').innerHTML=time;
+             setInterval(showTime,1000);
+        }   
+    </script>
+</head>
+<body>
+    
+    <button onclick="showTime()" >Show Time</button>
+    <h1 id="time"></h1>
+</body>
+</html>

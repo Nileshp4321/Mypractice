@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .live
+        {
+            background-color: #006542;
+            width: 600px;
+            height: 500px;
+            animation-name:live;
+            animation-duration:15s;
+            animation-delay: 0.1s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction:alternate;
+        }
+        @keyframes live {
+            50%
+            {
+                width: 540px;
+                height: 440px;
+                border-radius:50px;
+            }
+            
+        }
+        
+     
+       .inner
+       {
+           background-color:red;
+           width:500px;
+           height:400px;
+           position:absolute;
+           top: 50px;
+           left: 50px;  
+           animation-name:inner;
+            animation-duration:15s;
+            animation-delay: 0.1s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction:alternate;
+        }
+        @keyframes inner {
+            50%
+            {
+                width: 540px;
+                height: 440px;
+                border-radius:50px;
+            }
+            
+        }
+        .second
+        {
+            background-color:green;
+            width: 400px;
+            height: 300px;
+            position:absolute;
+            top: 50px;
+            left: 50px; 
+            animation-name:second;
+            animation-duration:15s;
+            animation-delay: 0.1s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-in-out;
+  }
+  @keyframes second {
+            50%
+            {
+                width: 540px;
+                height: 440px;
+                border-radius:50px;
+            }
+            
+        }
+  .third
+  {
+            background-color: gray;
+            width: 300px;
+            height: 200px;
+            position:absolute;
+            top: 50px;
+            left: 50px; 
+            animation-name:third;
+            animation-duration:15s;
+            animation-delay: 0.1s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction:alternate;
+            animation-direction:alternate;
+  }
+  @keyframes third {
+            50%
+            {
+                width: 540px;
+                height: 440px;
+                border-radius:50px;
+            }
+            
+        }
+  .forth
+  {
+            background-color: #c7db11;
+            width: 200px;
+            height: 100px;
+            position:absolute;
+            top: 50px;
+            left: 50px; 
+            animation-name:forth;
+            animation-duration:15s;
+            animation-delay: 0.1s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction:alternate;
+  }
+  @keyframes forth {
+            50%
+            {
+                width: 540px;             
+                height: 440px;
+                border-radius:50px;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="live">
+    <div class="inner">
+        <div class="second">
+            <div class="third">
+                <div class="forth"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

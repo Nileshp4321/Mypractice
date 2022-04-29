@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         li, a {
+            color: white;
+            text-decoration: none;
+            float: left;
+            list-style: none;
+            padding: 6px;
+            margin-left: 2px;
+            border-radius: 6px;
+        }
+
+        li {
+            margin-left: 20px;
+
+        }
+
+        li:hover {
+            background-color: rgb(16, 185, 16);
+            border-radius: 8px;
+            text-decoration: underline;
+
+
+        }
+
+        ul {
+            background-color: rgba(252, 252, 252, 0.479);
+            position: fixed;
+            left: 110px;
+            top: -5px;
+            width: 1400px;
+            height: 50px;
+            padding: 6px;
+            border-radius: 40px;
+            opacity: 0.9;
+
+        }
+
+        ul:hover {
+            background-color: none;
+        }
+
+        input {
+            float: right;
+            margin-top: 10px;
+            margin-right: 50px;
+            border-radius: 20px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 10px;
+
+        }
+
+        .img {
+            float: right;
+            position: absolute;
+            left: 1365px;
+            top: 22px;
+
+        }
+
+        .img:hover {
+            transform: scale(1.2);
+        }
+
+        .search {
+            border: none;
+            background-color: #fff;
+            width: 230px;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        .search:hover {
+            transform: scale(1.05)
+        }
+
+        .div1 {
+
+            width: 500px;
+            position: absolute;
+            top: 15%;
+            left: 32%;
+            height: 400px;
+            padding: 50px;
+            border: 0.5px solid black;
+            background-color: black;
+            border-radius: 8px;
+            opacity: 0.8;
+            animation-name: div;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: linear;
+            animation-timing-function: ease-in-out;
+
+
+        }
+
+
+        @keyframes div {
+            0% {
+                border-radius: 200px;
+            }
+
+            25% {
+                border-radius: 200px;
+            }
+
+            50% {
+                border-radius: 200px;
+            }
+
+            100% {
+                border-radius: 200px;
+            }
+
+        }
+
+        section {
+            margin: 80px 500px;
+
+        }
+
+        .username {
+            position: absolute;
+            left: 100px;
+            top: 150px;
+            font-size: 22px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .username:hover {
+            transform: scale(1.2);
+        }
+
+        .password {
+            color: white;
+            position: absolute;
+            left:100px;
+            top: 200px;
+            font-size: 22px;
+            font-weight: bolder;
+        }
+
+        .password:hover {
+            transform: scale(1.2);
+        }
+
+        .usern1 {
+            position: absolute;
+            left: 220px;
+            top: 140px;
+            background-color: rgb(255, 254, 254);
+            /* margin-left:45px; */
+            width: 250px;
+
+        }
+
+        .usern1:hover {
+            transform: scale(1.2);
+        }
+
+        
+        .usern2 {
+            position: absolute;
+            left: 220px;
+            top: 190px;
+            background-color: rgb(255, 255, 255);
+            /* margin-left:45px; */
+            width: 250px;
+        }
+        .usern2:hover {
+            transform: scale(1.2);
+        }
+
+
+        .login {
+            color: white;
+            background-color: rgba(16, 185, 16, 0.993);
+            position: absolute;
+            left: 220px;
+            top: 260px;
+            border: none;
+            font-size: 20px;
+            border-radius: 70px;
+            width: 110px;
+            padding: 7px;
+
+        }
+
+        .login:hover {
+            background-color: rgba(118, 247, 122, 0.911);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .reset {
+            color: white;
+            background-color: rgb(16, 185, 16);
+            position: absolute;
+            left: 374px;
+            top: 260px;
+            border: none;
+            font-size: 20px;
+            border-radius: 70px;
+            width: 110px;
+            padding: 7px;
+
+        }
+
+        .reset:hover {
+            background-color: rgba(118, 247, 122, 0.911);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .signup {
+            background-color: rgba(212, 59, 59, 0.705);
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            top: 320px;
+            left: 295px;
+            width: 110px;
+            height: 38px;
+            border: none;
+            border-radius: 65px;
+        }
+
+        .signup:hover {
+            background-color: rgba(243, 127, 127, 0.911);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        #account {
+            text-decoration: none;
+            color: white;
+            position: absolute;
+            top: 350px;
+            left: 213px;
+        }
+
+        .avtar {
+            width: 80px;
+            border-radius: 56px;
+            position: absolute;
+            right: 100px;
+            top: 40px;
+
+        }
+
+        .avtar:hover {
+            transform: scale(1.3);
+        }
+
+        .logo {
+            position: fixed;
+            top: 13px;
+            left: 5px;
+            z-index: 10;
+        }
+
+        .ho {
+            color: white;
+            position: absolute;
+            top: 10px;
+            left: 180px;
+            font-size: 55px;
+        }
+
+        .ho:hover {
+            transform: scale(1.2);
+
+        }
+    </style>
+</head>
+
+<body style="background-image:url('bg.jpg');">
+    <header class="header1">
+        <nav class="navbar">
+            <img class="logo" src="logo.png" width="100px" />
+            <ul>
+                <li class="a1"><a href="naviagation.html">Home</a></li>
+                <li class="a2"><a href="naviagation.html">About</a></li>
+                <li class="a3"><a href="naviagation.html">Services</a></li>
+                <li class="a4"><a href="naviagation.html">Contact us</a></li>
+                <input type="text" class="search" placeholder="Search in website" />
+                <img src="search.png" class="img" width="22px" height="22px" alt="searchlogo" />
+          
+        </nav>
+    </header>
+    <form action="naviagation.html" method="POST">
+        <section>
+            <div class="div1">
+                <h1 class="ho">Login In</h1>
+                <img src="avtar.jfif" class="avtar" />
+                <label class="username"> Username</label>
+                <input type="text" class="usern1" placeholder="Enter your Username" required />
+                <label class="password">Password</label>
+                <input type="password" class="usern2" placeholder="Enter your Password" required />
+                <button type="submit" class="login" name="login">Login</button>
+                <button type="reset" class="reset" name="signup">Reset</button>
+                <h4 id="account">If you have not account click on sign up</h4>
+                <button type="next" class="signup" name="signup" href="signup.html">Sign up</button>
+
+
+            </div>
+        </section>
+    </form>
+
+</body>
+
+</html>
