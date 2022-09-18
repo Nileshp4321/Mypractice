@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #original
+        {
+            /* margin: auto; */
+            /* display: flex; */
+            /* align-items: center;
+            justify-content: center; */
+        }
+        #id-1,#id-2
+        {
+            animation-name: ok;
+            height: 5rem;
+            width:  5rem;
+            margin:5rem 5rem;
+            display: inline-block;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 50%;
+        }
+        #id-3
+        {
+            width: 20rem;
+            height: 1rem;
+            border: 2px solid black;
+             transform: skewX(60deg);
+            position: relative;
+            left:5rem;
+            top:5rem;
+            background-color: rgb(148, 148, 144);
+        }
+        .ok
+        {
+            animation-name: ok;
+            animation-duration: 13s;
+            animation-delay: 3s;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ok {
+            /* 50%
+            {
+                transform: translateX(100px)
+            } */
+            100%
+            {
+                transform: translateX(900px);
+            }
+            
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="id-3" class="ok"></div>
+    <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div>
+    <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div>
+    <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div>
+    <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div> <div id="id-3" class="ok"></div>
+    <div id="original">
+
+   <div id="id-1" class="ok"></div>
+   <div id="id-2" class="ok"></div>
+
+</div>
+</body>
+</html>

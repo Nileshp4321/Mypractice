@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            /* background-color: red; */
+            list-style: none;
+            display: flex;   
+        }
+        li
+        {
+            background-color: rgb(73, 211, 158);
+            width: 90vw;
+            margin:0.2rem; 
+            padding:2rem;
+            border-radius:0.3rem;
+        }
+        a
+        {
+            padding: 1.2rem;
+            border-radius:0.2rem;
+        }
+        a:hover
+        {
+           background-color:black;
+           color:white;
+        }
+        #left
+        {
+            float: left;
+            width:20%;
+            height:100vh;
+            background-color: blue;
+        }
+        #right
+        {
+            float:right;
+            width: 20%;
+            height: 100vh;
+            background-color:red;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        #circle
+        {
+            margin: auto;
+            width:50px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            /* background-color: black; */
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: clockwise;
+            animation-iteration-count: infinite;
+            animation-duration: 0.5s;
+        }
+        @keyframes clockwise {
+                0%
+                {
+                    /* background-color:rgb(0, 17, 255); */
+                }
+                100%
+                {
+                    /* background-color:rgb(255, 0, 191); */
+                    transform: rotate(180deg);
+                    /* transform:translateX(130px); */
+                }
+            }
+        #fcircle
+        {
+            margin:auto;
+            width:40px;
+            height:30px;
+            background-color: rgb(139, 179, 76);
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: anticlockwise;
+            animation-iteration-count: infinite;
+            animation-duration: 0.5s;
+        }
+        @keyframes anticlockwise {
+                0%
+                {
+                    /* background-color:rgb(248, 248, 248); */
+                    /* transform: rotate(360deg); */
+                }
+                100%
+                {
+                    /* background-color:rgb(29, 110, 216); */
+                    transform: rotate(360deg);
+                    /* transform:translateX(1300px);
+                    transform:translateX(130px); */
+                }
+            }
+        #scircle
+        {
+            margin: auto;
+            width:30px;
+            height: 20px;
+            background-color: rgb(28, 28, 29);
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: aclockwise;
+            animation-iteration-count: infinite;
+            animation-duration: 0.5s;
+        }
+        @keyframes aclockwise {
+                0%
+                {
+                    /* background-color:red; */
+                    /* transform: rotate(180deg); */
+                }
+                100%
+                {
+                    /* background-color:yellow; */
+                    transform: rotate(180deg);
+                    /* transform:translateX(1300px);
+                    transform:translateX(130px); */
+                }
+
+            }
+            #animation
+            {
+                display: flex;
+                
+            }
+            #audio
+            {
+                margin-top:2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+    </style>
+</head>
+<body>
+    <div>
+    <div id="left">
+        Hello
+    </div>
+    <div id="right">
+        Hello
+    </div>
+    <div>
+        <ul>
+         <li><a>Home</a></li>
+         <li><a>About</a></li>
+         <li><a>Services</a></li>
+         <li><a>Contact us</a></li>
+        </ul>
+    </div>
+    <h1>Arabic Kuthu Beast</h1>
+    <div id="animation">
+    <div id="circle">
+        <div id="fcircle">
+            <div id="scircle">
+        
+            </div>
+        </div>    
+    </div>
+    <div id="circle">
+        <div id="fcircle">
+            <div id="scircle">
+        
+            </div>
+        </div>    
+    </div>
+    <div id="circle">
+        <div id="fcircle">
+            <div id="scircle">
+        
+            </div>
+        </div>    
+    </div>
+    <div id="circle">
+        <div id="fcircle">
+            <div id="scircle">
+        
+            </div>
+        </div>    
+    </div>
+</div>
+</div>
+<div id="audio">
+<audio controls onclick="click()">
+    <source src="Arabic Kuthu Beast 320 Kbps.mp3" type="audio/ogg">
+</audio>
+</div>
+</body>
+</html>

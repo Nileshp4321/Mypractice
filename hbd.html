@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button
+        {
+            position: fixed;
+        }
+    </style>
+    <script>
+         
+        //  function hide()
+        //  {
+        //     document.getElementById("call").style.display="none";
+        //  }
+        // function greeting()
+        // {
+        //    alert("s")
+        //     // name=document.getElementsByTagName("input")[0].value;
+        //     // document.getElementById("call").innerHTML="Happy Birthday "+name;
+        //     // setTimeout(hide,5000);
+        //     // var windows=window.open("","","widht=200,height:200");
+        //     // windows.btoa();
+        // //     window.stop();
+        // }
+        function timer(){
+            var second=15;
+            var timer=setInterval(function(){
+                if(second>=10)
+                {
+                 document.getElementById("time").innerHTML="00:"+second;
+                }
+                else
+                {
+                    document.getElementById("time").innerHTML="00:0"+second;
+                }
+            second--;
+            if(second<0)
+            {
+                clearTimeout(timer);
+                alert("Your Time is out");
+            }
+            if(second<=5||second==0)
+            {
+                document.getElementById("Message").innerHTML="You Have "+second+" left Kindly submit your paper";
+            }
+        },1000);
+    }
+    </script>
+</head>
+<body>
+    <h1 id="Message" ></h1>
+    <h1 id="time" >00:15</h1>
+    <button type="button" onclick="timer()">Time Start</button>
+</body>
+</html>

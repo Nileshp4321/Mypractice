@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function sendMail(mail)
+        // {
+        //     alert("you select "+mail);
+        //     req=new XMLHttpRequest();
+        //     req.open("GET","showdata.php?mail="+mail,true);
+        //     req.send();
+        // }
+        function showNotes(date)
+        {
+            email=document.getElementById("email").value;
+            req=new XMLHttpRequest();
+            req.open("GET","showdata.php?date="+date+"&email="+email,true);
+            req.send();
+            req.onload=function(){
+                 if(req.readyState==4&&req.status==200)
+                 {
+                    // alert("you select "+date);
+                    document.getElementById("textt").innerText=req.responseText;
+                 }
+
+            }
+        }
+        
+    </script>
+    <style>
+        body
+        {
+            background-color: rgb(186, 186, 186);
+        }
+        #main
+        {
+            margin: auto;
+            width: 60rem;
+            height:80rem;
+            border:2px solid black;
+            resize: none;
+            overflow: none;
+        }
+        #notesbox
+        {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        input
+        {
+            margin:1rem;
+            padding-left: 0.8rem;
+            padding-top: 0.5rem 0.8rem;
+            border-radius: 0.2rem;
+            outline: none;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        textarea
+        {
+            
+            border:2px solid black;
+            resize: none;
+            padding: 0.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        button
+        {
+            padding: 0.5rem 2rem;
+            border-radius: 0.3rem;
+            color: white;
+            background-color: rgb(72, 72, 72);
+        }
+        button:hover
+        {
+            opacity: 0.7;
+            
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="main">
+        <div id="notesbox">
+        <h1>Show Notes</h1><hr>
+        <h3>Email<input type="email" id="email" required /></h3>
+        <h3>Choose Date you want notes
+            <input type="date" name="date" required onchange="showNotes(this.value)"/>
+        </h3>
+        <h3 id="hthree"></h3>
+        <textarea rows="40" cols="100" name="notes" id="textt"  required></textarea><br>
+    </div>
+    </div>
+</body>
+</html>

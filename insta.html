@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="instalogo.jpg" type="image/icon type"/>
+    <style>
+        #main {
+
+            position: relative;
+            left: 55vw;
+            top: -30rem;
+            width: 22rem;
+            height: 30rem;
+            background-color: rgb(255, 255, 255);
+            border: 0.5px solid rgb(203, 198, 198);
+        }
+
+        .input {
+            display: flex;
+            padding-top: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: grey;
+
+        }
+
+        input {
+            border: 1px solid gray;
+            display: flex;
+            width: 20vw;
+            position: relative;
+            top: 5vw;
+            /* border-radius: 0.5rem; */
+            border: 0.5px solid white;
+            outline: none;
+            background-color: rgb(250, 250, 250);
+            padding: 0.8rem;
+        }
+
+        img {
+            position: absolute;
+            left: 6vw;
+            top: 3vw;
+        }
+
+        input:hover {
+
+            border: 0.5px solid black;
+            /* animation-name: input;
+            animation-duration: 2s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+            border-bottom: 2px solid rgb(29, 70, 206);
+            border-right: white;
+            border-top: white;
+            border-left: white; */
+        }
+
+        /* @keyframes input {
+                30%
+                {
+                    border-top:2px solid black;
+                }
+                60%
+                {
+                    border-right:2px solid black;
+                }
+                90%
+                {
+                    border-bottom:2px solid black;
+                }
+                100%
+                {
+                    border-left:2px solid black;
+                }
+
+            } */
+        button {
+            width: 17rem;
+            position: absolute;
+            top: 33vh;
+            left: 3vw;
+            background-color: #278feaf1;
+            color: white;
+            padding: 0.4rem;
+            border-radius:0.3rem;
+            outline:none;
+            border:none;
+            
+        }
+        button:hover
+        {
+            cursor: pointer;
+        }
+        h3
+        {
+            border:2px solid black;
+            position:relative;
+            top:8rem;
+            border-bottom: 2px solid rgb(183, 183, 183);
+            border-right: white;
+            border-top: white;
+            border-left: white;
+            display: inline-block;
+            text-align: center;
+            width: 21.5rem;
+            
+        }
+        .fb
+        {
+            position:relative;
+            top:8rem;
+            color: rgb(77, 86, 162);
+            /* background-color: rgb(225, 224, 224); */
+            text-align: center; 
+        }
+        #img
+        {
+            position:relative;
+            left:-8rem;
+            top:0.1em;
+            width: 0.83rem;
+            height: 0.85rem;
+        }
+        #b
+        {
+          position: relative;
+          left:1rem;
+        }
+        .a
+        {
+            text-align: center;
+            position: relative;
+            
+        }
+        a:link
+        {
+            color: black;
+        }
+        #anchor
+        {
+            text-decoration: none;
+            position:relative;
+            top:9rem;
+            text-align: center;
+        }
+        .box
+        {
+            position:relative;
+            top:10rem;
+            text-align:center;
+
+        }
+        #anchor1
+        {
+           color: #0478ddf1;
+           text-decoration: none;
+        }
+        #anchor1:hover
+        {
+            text-decoration: underline;
+        }
+        #img1
+        {
+            position: relative;
+            top: 4.3rem;
+            left:17rem;
+        
+        }
+        #image
+        {
+            position: relative;
+            top: 2.3rem;
+            left:-9.5rem;
+            width:15%;
+            height:12%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <img src="mobile.jpg" id="img1">
+        <img id="image" src="instahome.png" /></img>
+
+    <div id="main">
+        <img src="insta.png" />
+        <div id="logo"></div>
+        <div class="input">
+
+            <input type="text" placeholder="Phone number,username, or email" /></br>
+            <input type="password" placeholder="Password" />
+
+        </div>
+        <button><b>Log In</b></button>
+        <div><h3>OR</h3></div>
+        <div class="fb">
+           <b id="b"> Log In Facebook</b><img id="img" src="fbicon.png" /><br>
+         
+        </div>
+       <div class="a">  <a href="#" id="anchor">Forget password?</a></div>
+      <div class="box">Don't have an account? <a href="#" id="anchor1"><b>Sign Up</b></a></div>
+    </div>
+    
+    
+</body>
+
+</html>

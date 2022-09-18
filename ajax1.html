@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajax Exam</title>
+  <script src="ajax1.js" ></script>
+  <style>
+    form
+    {
+      display:flex;
+      margin:auto;
+      width:30rem;
+      height:35rem;
+      border:2px solid black;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .input
+    {
+      margin:1.2rem;
+    }
+    
+    input
+    {
+       width:20rem;
+       height:1.5rem; 
+       margin:1.2rem;
+       padding-left:3rem;
+       font-size:1rem;
+       border-radius:0.3rem
+    }
+    div button
+    {
+      outline: none;
+      width:8rem;
+      padding:0.5rem;
+      border-radius:0.3rem;
+      color:black;
+    }
+    div button:hover
+    {
+      background-color: rgb(209, 94, 94);
+      color:white;
+    }
+    /* span
+    {
+      visibility: hidden;
+    } */
+  </style>
+</head>
+<body>
+  <form>
+   <div id="login">
+    <h2>Log In</h2>
+  </div>
+  <div class="input" id="input-signin">
+    <label>Username <span style="color:red;">*</span></label>
+   <input type="email" onchange="ajax(this.value)" /><span id="span"></span>
+  </div>
+  <div class="input" id="input-password">
+    <label>Mobile No.<span style="color:red;">*</span></label>
+   <input type="tel" />
+  </div>
+  <div class="input" id="input-password">
+    <label>Password <span style="color:red;">*</span></label>
+   <input type="tel" />
+  </div>
+  <div>
+
+    <button>Log In</button>
+  </div>
+  </form>
+</body>
+</html>

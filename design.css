@@ -1,0 +1,27 @@
+
+ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(83, 79, 79);
+    padding: 0.8rem;
+}
+li
+{
+    text-align: center;
+    padding-left: 8rem;
+}
+li a
+{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    padding:0.5rem;  
+   
+}
+a:hover
+{
+    background-color: rgb(236, 108, 57);
+    border-radius:0.3rem;
+    color: rgb(27, 25, 25);
+}

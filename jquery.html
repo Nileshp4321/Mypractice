@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Tutorials</title>
+    <link rel="stylesheet" href="Fullcss.css"/>
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<style>
+    body
+    {
+        margin: 0%;
+    }
+    #slidebar
+    {
+        /* margin:1.5rem; */
+        width: 35vw;
+        height:100vh;
+        border:2px solid black;
+        display: none;         
+    }
+    img
+    {
+        position: fixed;
+        top:0.5rem;
+        width: 5%;
+        height: 10%;
+    }
+    #close
+    {
+        position:absolute;
+        left:27rem;
+        /* top:2.5rem; */
+        width: 3%;
+        height: 5%;
+    }
+    div
+    {
+        position:relative;
+        margin:2rem;
+        width: 100px;
+        height: 100px;
+        border:2px solid black;
+        background-color: yellow;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    // $("#img").click(function(){
+    //     $("#slidebar").show();
+    //     $("#img").hide();        
+    // })
+    // $("#close").click(function(){
+    //     $("#slidebar").hide();
+    //     $("#img").show();
+    // })
+    $("#btn").click(function(){
+        $("#div1").slideToggle(12000);
+        $("#div2").slideToggle(12000);
+        $("#div3").slideToggle(12000);
+    })
+    // $("#btn").click(function(){
+    //     $("#div1").slideToggle(3000);
+    //     $("#div2").slideToggle(3000);
+    //     $("#div3").slideToggle(3000 );
+    // })
+    // $("#btn").click(function(){
+    //     $("#div1").animate({
+    //         left:'250px',
+    //         fontSize:"30px",
+    //         width:"300px"
+          
+    //     });
+    // });
+    $("#btn1").click(function(){
+        $("#div1").stop();
+        $("#div2").stop();
+        $("#div3").stop();
+    })
+});
+
+</script>
+</head>
+
+<body>
+    <ul>
+        <li><a class="a1" href="home1.html">Home</a></li>
+        <li><a class="a1" href="Library.html">Library</a></li>
+        <li><a class="a1" href="#">List</a></li>
+        <li><a class="a1" href="contact.html">Contact Us</a></li>
+
+    </ul>
+    <img id="img" src="slidebar.png" />
+    <div id="slidebar">
+        <img id="close" src="multi.png" />
+    </div>
+    <!-- <button id="show">Show</button>
+    <button id="hide">Hide</button> -->
+    <div id="div1">Hello I am moving</div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <button id="btn">Move</button>
+    <button id="btn1">Stop</button>
+</body>
+</html>
