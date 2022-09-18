@@ -1,18 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "nileshp";
-$password = "1234";
-$dbname = "BookDB";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
- die("Connection failed: " . mysqli_connect_error());
-}
-$sql="SELECT * FROM BOOK ";
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,12 +33,6 @@ $sql="SELECT * FROM BOOK ";
             outline: none;
             padding: 2px 8px;
         }
-        th
-        {
-           padding:0px;        
-           text-align:center;   
-        }
-       
         </style>
 </head>
 <body>
@@ -66,46 +45,41 @@ $sql="SELECT * FROM BOOK ";
         <input id="input1"type="text" />
         <button id="button1"type="sumbit">Search</button>
     </ul>
-    <table cellspacing='0' cellpadding='10' width='1600' border="1" >
-    <tr>
-    <th>College Id</th>
-    <th>Book Allocated</th>       
-    <th>Allot Date</th>       
-    <th>Submission Date</th>       
-    </tr> 
-    <?php
-    if($result=mysqli_query($conn,$sql))
-    {
-        echo"Book Allready Alloceted";
-   
-    while($row=mysqli_fetch_row($result))
-    {   
-      echo"
-      <style>
-        table
-        {
-            text-align:center;
-             
-        }
-        td
-        {
-            padding: 10px;
-        }
-        </style>
-        <table width='1500'>
-          <tr>
-        <td>$row[1]</td>
-        <td>$row[0]</td>
-        <td>$row[4]</td>
-        <td>$row[5]</td>
-        </tr>";
-       
-    }
+<?php
+$servername="localhost";
+$username="nileshp";
+$password="1234";
+$dbname="BookDB";
+$conn=mysqli_connect($servername,$username,$password,$dbname);
+if(!$conn)
+{
+    die("Connection failed ".mysqli_connect_error());
 }
-    mysqli_close($conn);
-    ?></table>
-   
-    
+$name=$_POST['name'];
+$clgid=$_POST['clgid'];
+$bookname=$_POST['bookname'];
+$bookid=$_POST['bookid'];
+$bookallotdate=$_POST['bookallotdate'];
+$submission=$_POST['submission'];
+$sql="INSERT INTO Book (name,clgid,bookname,bookid,bookallotdate,submission) VALUES ('$name','$clgid','$bookname','$bookid','$bookallotdate','$submission')";
+if(!mysqli_query($conn,$sql))
+{
+ die("Error : ".$sql.mysqli_error($conn));
+}
+else
+{
+   echo"<style>
+   h2
+   {
+       color:green;
+       text-align:center;
+   }
+   </style>
+   <h2 >You Form Has Been Sumbitted Succesfully</h2>";
+}
+
+mysqli_close($conn);
 
 
 
+?>

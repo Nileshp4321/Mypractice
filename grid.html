@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container
+        {
+            display:grid;
+            width:100%;
+            height:100vh;
+            grid-template-columns:5rem 5rem 5rem 5rem;
+            grid-template-rows:5rem 5rem 5rem 5rem;
+            background-color: rgb(82, 82, 255);
+            /* justify-content:center;
+            justify-content:space-between;
+            justify-content:space-around;
+            justify-content:space-evenly; */
+            /* justify-content:start; */
+            /* justify-content:end; */
+
+        }
+        .items
+        {
+            border:2px solid black;
+            background-color: white;
+        }
+        #items1
+        {
+            grid-column:1/3; 
+            background-color: red;
+        }
+        #items2
+        {
+            grid-column:3/6;
+        }
+        #items3
+        {
+            grid-column:3/6;
+        }
+        #items4
+        {
+            grid-column:1/6;
+        }
+        #items5
+        {
+            grid-column:1/5;
+        }
+        #items6
+        {
+            grid-column:5/6;
+        }
+        #items7
+        {
+            grid-column:1/6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="items1"><img /></div>
+        <div class="items" id="items2"><img /></div>
+        <div class="items" id="items3"><img /></div>
+        <div class="items" id="items4"><img /></div>
+        <div class="items" id="items5"><img /></div>
+        <div class="items" id="items6"><img /></div>
+        <div class="items" id="items7"><img /></div>
+    </div>
+</body>
+</html>

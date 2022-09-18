@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+</head>
+<body>
+    <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        /* .main
+        {
+          display:flex;
+          flex-wrap: wrap;
+          width: 100%;
+          height:100%;
+          border: 3px solid red;
+        } */
+        .container
+        { 
+            display: flex;
+            flex-wrap: wrap;
+            position:relative;
+            padding: 0%;
+            margin-top:0.5rem;
+            width: 100rem;
+            height:90vh;
+            overflow-y:auto;
+            border:3px solid black;
+            /* border-bottom:none; */
+            outline: none;
+            border-radius: 0.2rem;
+        }
+        /* .header1 */
+        .header1 h1
+        {
+           text-align: center;
+           /* z-index: 300; */
+            /* color: orange; */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* width:69.98rem; */
+            /* height:8rem; */
+            /* background-color: rgb(255, 197, 50);
+            border: 3px solid rgb(69, 68, 68); */
+            /* position: fixed; */
+        }
+        .optindicate
+        {
+          color: green;
+        }
+        .header1,h1
+        {
+          width:100%;
+          color:orangered;
+          text-align: center;
+        }
+        h3 input
+        {
+          width: 30rem;
+          border:2px solid black;
+        }
+        .question
+        {
+          visibility: hidden;
+          margin-top:12rem;
+          margin-left:3rem;
+        }
+        .question ul li
+        {
+          font-size:1rem;
+        }
+        li
+        {
+          font-size: 12rem;
+        }
+        li h4
+        {
+          font-size: 1.2rem;
+        }
+        .radio
+        {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .radiobtn input
+        {
+          /* width: 1rem; */
+          /* height:4rem; */
+          margin:1rem;
+        }
+        .radiobtn input
+        {
+
+          border:2px solid white;
+          accent-color: rgb(13, 127, 13);
+        }
+        .radiobtn
+        {
+          display: flex;
+          flex-direction: row;
+          /* justify-content: center; */
+          flex-wrap: wrap;
+          align-items:center;
+        }
+        .radiobtn h6
+        {
+          margin-left:0.5rem;
+          font-weight: 400;
+        }
+        .formbtn
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+        .formbtn .btn1
+        {
+          flex-grow: 0.2;
+        }
+        .formbtn .btn2
+        {
+          flex-grow: 0.2;
+        }
+        .inputques
+        {
+          margin: 2rem;
+        }
+        .inputques h4 input
+        {
+            border: 0.5px solid black ;
+            border-radius: 0.2rem;
+            outline: none;
+            width: 60rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .radiobtn .optEdit
+        {
+          visibility: hidden;
+          width: 50rem;
+          border: 1px solid black;
+          padding-right: 0rem;
+        }
+        .edit
+        {
+          visibility: hidden;
+        }
+        .editbtn
+        {
+          position:fixed;
+          left:35rem;
+          top:20rem;
+          visibility: visible;
+        }
+        #quizname
+        {
+            color: red;
+            border-radius: 0.2rem;
+            outline: none;
+            width: 30rem;
+            height: 2.5rem;
+            margin-left: 5rem;
+        }
+        .noq
+        { 
+            border-radius: 0.2rem;
+            outline: none;
+            width: 30rem;
+            height: 2.5rem;
+            margin-left: 5rem;
+            border: 0.5px solid black ;
+            margin-bottom:3rem;
+        }
+        .question h5
+        {
+          text-align: center;
+        }
+      
+        .radioafter
+        {
+          visibility: hidden;
+        }
+        .optionvisible input
+        {
+          width: 40rem;
+          height: 2rem;
+          border: 1px solid black;
+        }
+
+    </style>
+    <script>
+        var count=0;
+        var opt=0;  
+        var radiobtn=0;
+        function change(obj)
+        {
+               if(document.getElementsByClassName("noq")[0].value=="")
+               {
+                alert("Please entered Quiz name");
+               }
+               else
+               {
+               var x=document.getElementsByClassName("input");
+              //  document.getElementsByTagName("h4")[count].innerHTML= obj.value; 
+              //  obj.style.visibility="hidden";
+               document.getElementsByClassName("noq")[0].style.display="none";
+               document.getElementsByTagName("span")[0].style.display="none";
+               document.getElementsByTagName("h5")[0].innerHTML=document.getElementsByClassName("noq")[0].value;
+               count++;
+               }
+        }
+        function allAppear()
+        {
+          document.getElementsByClassName("question")[0].style.visibility="visible";
+          document.getElementsByClassName("edit")[0].style.visibility="visible";
+          document.getElementsByClassName("container")[0].style.borderBottom="none";
+          var x=document.getElementsByClassName("optEdit");
+          var y=document.getElementsByClassName("radioafter");
+          document.getElementsByClassName("editbtn")[0].style.visibility="hidden";
+          for(i=0;i<x.length;i++)
+          {
+            x[i].style.visibility="visible";
+            y[i].style.visibility="visible";
+            radiobtn++;
+          }
+        }   
+         
+        function updateOpt(obj)
+        {
+          var y=document.getElementsByClassName("optionvisible");
+          var z=document.getElementsByClassName("radioafter");
+          var radio=document.getElementsByClassName("optEdit");
+             radio[opt].style.visibility="visible";  
+             y[opt].innerHTML=obj.value;
+             z[opt].style.visibility="visible";
+             obj.style.visibility="none";
+             opt++;
+           }
+          //  function checkAnswer(obj)
+          //  {
+          //      var ans=document.getElementsByName("btn");
+          //      for(i=0;i<ans.length;i++)
+          //      {
+          //      if(ans[i].checked)
+          //      {
+          //        if(ans[i]==obj.value)
+          //        {
+          //         alert("Your Answer is correct");
+          //        }
+          //        else
+          //        {
+          //         alert("Your answer is wrong");
+          //        }
+          //      }
+          //      }
+          //  }
+    </script>
+  </head>
+  <body>
+    <form action="checkanswer.php" method="Post" >
+    <div class="main">
+        <div class="container">
+            <h1>Customized Quiz</h1>
+            <button class="btn btn-primary editbtn" onclick="allAppear()" >Edit Customized Quiz Form</button>
+          <hr>
+            <div class="question">
+              <b><span id="quizname">Name of Quiz</span></b><h5 id="h5noq"></h5><input class="noq" type="text" placeholder="Ex. Java Quiz " onchange="change(this) " name="quizname" required/>
+              <ul>                
+               <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)" name="q1"/></h4></li></b>
+                <!-- 8 -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <div class="radiobtn">  <input type="radio" name="btn" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio1" /></div>
+                  <div class="radiobtn">  <input type="radio" name="btn" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio2" /></div>
+                  <div class="radiobtn">  <input type="radio" name="btn" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio3" /></div>
+                  <div class="radiobtn">  <input type="radio" name="btn" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio4" /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)" name="q2"/></h4></li></b>
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <!-- The reference of the array -->
+                  <div class="radiobtn"><input type="radio" name="btn1" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio5"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn1" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio6"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn1" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio7"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn1" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio8"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)" name="q3"/></h4></li></b>
+                <!-- Objects -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <div class="radiobtn"><input type="radio" name="btn2" class="radioafter"required disabled/><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio9"   /></div>
+                  <div class="radiobtn"><input type="radio" name="btn2" class="radioafter"required disabled/><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio10"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn2" class="radioafter"required disabled/><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio11"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn2" class="radioafter"required disabled/><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio12"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)" name="q4"/></h4></li></b>
+                <!-- At the run time -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                 <div class="radiobtn"><input type="radio"  name="btn3" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio13"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn3" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio14"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn3" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio15"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn3" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio16"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)" name="q5"/></h4></li></b>
+                <!-- java.lang.Object -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                 <div class="radiobtn"><input type="radio"  name="btn4" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio17"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn4" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio18"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn4" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio19"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn4" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio20"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)" name="q6"/></h4></li></b>
+                <!-- And int values -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                 <div class="radiobtn"><input  type="radio" name="btn5" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio21"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn5" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio22"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn5" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio23"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn5" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio24"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)"name="q7"/></h4></li></b>
+                <!-- java.lang -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <div class="radiobtn"><input type="radio" name="btn6" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio25"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn6" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio26"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn6" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio27"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn6" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio28"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)"name="q8"/></h4></li></b>
+                <!-- 13 -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <div class="radiobtn"><input type="radio" name="btn7" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio29"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn7" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio30"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn7" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio31"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn7" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio32"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)"name="q9"/></h4></li></b>
+                <!-- 3.0 -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <div class="radiobtn"><input type="radio" name="btn8" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio33"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn8" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio34"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn8" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio35"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn8" class="radioafter" required disabled  /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio36"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                <b><li type="1" class="inputques" ><h4><input type="text" class="input form-control" placeholder="Enter Question Here"  onchange="change(this)"name="q10"/></h4></li></b>
+                <!-- Interface -->
+                <div class="radio">
+                  <h5 class="optindicate">Edit Option :- </h5>
+                  <div class="radiobtn"><input type="radio" name="btn9" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio38"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn9" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio37"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn9" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio39"  /></div>
+                  <div class="radiobtn"><input type="radio" name="btn9" class="radioafter" required disabled /><input class="optEdit form-control" onchange="updateOpt(this)" type="text" name="radio40"  /></div>
+                  <div class="radiobtn">  <input class="optEdit form-control" onchange="updateOpt(this)" placeholder="Enter correct Answer" type="text" name="radio4" /></div>
+                </div>
+                </ul>
+            </div>
+        </div>     
+    </div>
+    <div class="formbtn">
+      <button class="btn2 btn btn-warning edit" type="submit">Create New Quiz</button>
+  </div>
+
+  </div>
+
+</form>
+</body>
+</html>

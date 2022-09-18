@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .main
+        {
+          display:flex;
+          width: 100%;
+          height:100%;
+        }
+        .container
+        { 
+            position:relative;
+            padding: 0%;
+            margin-top:0.5rem;
+            width: 80%;
+            height:90vh;
+            overflow-y:auto;
+            border:3px solid black;
+            outline: none;
+            border-radius: 0.2rem;
+        }
+        .header1
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:69.5rem;
+            height:8rem;
+            background-color: rgb(255, 197, 50);
+            border: 3px solid rgb(161, 159, 159);
+            position: fixed;
+        }
+        .header1,h1
+        {
+          color:black;
+          font-size:4rem;
+        }
+        .question
+        {
+          margin-top:12rem;
+          margin-left:3rem;
+        }
+        .question ul li
+        {
+          font-size:1rem;
+        }
+        li h4
+        {
+          font-size: 1rem;
+        }
+        .radio
+        {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        input
+        {
+          width: 1rem;
+          height:4rem;
+        }
+        input
+        {
+          border:2px solid white;
+          accent-color: rgb(13, 127, 13);
+        }
+        .radiobtn
+        {
+          display: flex;
+          flex-direction: row;
+          align-items:center;
+        }
+        .radiobtn h6
+        {
+          margin-left:0.5rem;
+          font-weight: 400;
+        }
+        .formbtn
+        {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+        .formbtn .btn1
+        {
+          flex-grow: 0.2;
+        }
+        .formbtn .btn2
+        {
+          flex-grow: 0.2;
+        }
+
+    </style>
+    <script>
+      function checkAnswer()
+      {
+        var x=document.getElementsByName['btn'][0];
+        alert(x);
+      }
+    </script>
+  </head>
+  <body>
+    <form action="checkanswer.php" method="post">
+    <div class="main">
+        <div class="container">
+            <div class="header1"><h1>Quiz Test </h1></div>
+            <div class="question">
+              <ul>
+                <li type="1"><h4>Number of primitive data types in Java are </h4></li>
+                <!-- 8 -->
+                <div class="radio">
+                  <div class="radiobtn"><input type="radio" name="btn" /><h6>6</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn" /><h6>7</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn" /><h6>8</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn" /><h6>9</h6></div>
+                </div>
+                <li type="1"><h4>When an array is passed to a method , what does the method recieve</h4></li>
+                <div class="radio">
+                  <!-- the reference of the array -->
+                  <div class="radiobtn"><input type="radio" name="btn1"  /><h6>The reference of array</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn1" /><h6>A copy of the array</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn1" /><h6>Length of the array</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn1" /><h6>Copy of first element</h6></div>
+                </div>
+                <li type="1"><h4>Array in java are</h4></li>
+                <!-- objects -->
+                <div class="radio">
+                  <div class="radiobtn"><input type="radio" name="btn2"  /><h6>Object references</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn2" /><h6>Objects</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn2" /><h6>Primitive data type</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn2" /><h6>None</h6></div>
+                </div>
+                <li type="1"><h4>When is the object is created with new keyword</h4></li>
+                <!-- At the run time -->
+                <div class="radio">
+                 <div class="radiobtn"><input type="radio"  name="btn3"  /><h6>Object references</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn3" /><h6>Objects</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn3" /><h6>Primitive data type</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn3" /><h6>None</h6></div>
+                </div>
+                <li type="1"><h4>In which of the following is toString() method defined?</h4></li>
+                <!-- java.lang.Object -->
+                <div class="radio">
+                 <div class="radiobtn"><input type="radio"  name="btn4"  /><h6>java.lang.Object</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn4" /><h6>java.lang.String</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn4" /><h6>java.lang.util</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn4" /><h6>None</h6></div>
+                </div>
+                <li type="1"><h4>compareTo() returns</h4></li>
+                <!-- an int value -->
+                <div class="radio">
+                 <div class="radiobtn"><input type="radio"  name="btn5"  /><h6>True</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn5" /><h6>False</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn5" /><h6>And int values</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn5" /><h6>none</h6></div>
+                </div>
+                <li type="1"><h4>To which of the following does the class string belong to</h4></li>
+                <!-- java.lang -->
+                <div class="radio">
+                  <div class="radiobtn"><input type="radio" name="btn6"  /><h6>java.lang</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn6" /><h6>java.awt</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn6" /><h6>java.applet</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn6" /><h6>java.string</h6></div>
+                </div>
+                <li type="1"><h4>Total contructor string class have</h4></li>
+                <!-- 13 -->
+                <div class="radio">
+                  <div class="radiobtn"><input type="radio" name="btn7"  /><h6>3</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn7" /><h6>7</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn7" /><h6>13</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn7" /><h6>20</h6></div>
+                </div>
+                <li type="1"><h4>Output of Math.floor(3,6)?</h4></li>
+                <!-- 3.0 -->
+                <div class="radio">
+                  <div class="radiobtn"><input type="radio" name="btn8"  /><h6>3</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn8" /><h6>3.0</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn8" /><h6>4</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn8" /><h6>4.0</h6></div>
+                </div>
+                <li type="1"><h4>What is Runnable</h4></li>
+                <!-- interface -->
+                <div class="radio">
+                  <div class="radiobtn"><input type="radio" name="btn9"  /><h6>Abtract class</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn9" /><h6>Interface</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn9" /><h6>Class</h6></div>
+                  <div class="radiobtn"><input type="radio" name="btn9" /><h6>Method</h6></div>
+                </div>
+              </ul>
+            </div>
+        </div>     
+    </div>
+    <div class="formbtn">
+      <button class="btn1 btn btn-warning" type="reset">Reset</button>
+      <button class="btn2 btn btn-warning" onsubmit="checkAnswer()" type="submit">Submit</button>
+  </div>
+</form>
+  </body>
+</html>

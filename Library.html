@@ -1,88 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Effects - Effect demo</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-    .toggler { width: 500px; height: 200px; position: relative; }
-    #button { padding: .5em 1em; text-decoration: none; }
-    #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; }
-    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
-    .ui-effects-transfer { border: 2px dotted gray; }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    // run the currently selected effect
-    function runEffect() {
-      // get effect type from
-      var selectedEffect = $( "#effectTypes" ).val();
- 
-      // Most effect types need no options passed by default
-      var options = {};
-      // some effects have required parameters
-      if ( selectedEffect === "scale" ) {
-        options = { percent: 50 };
-      } else if ( selectedEffect === "transfer" ) {
-        options = { to: "#button", className: "ui-effects-transfer" };
-      } else if ( selectedEffect === "size" ) {
-        options = { to: { width: 200, height: 60 } };
-      }
- 
-      // Run the effect
-      $( "#effect" ).effect( selectedEffect, options, 500, callback );
-    };
- 
-    // Callback function to bring a hidden box back
-    function callback() {
-      setTimeout(function() {
-        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
-      }, 1000 );
-    };
- 
-    // Set effect from select menu value
-    $( "#button" ).on( "click", function() {
-      runEffect();
-      return false;
-    });
-  } );
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Fullcss.css"/>
+    <style>
+        h1
+        {
+            text-align: center;
+        }
+        span
+        {
+            color: red;
+        }
+        form
+        {
+            text-align: center;
+            display: flex;
+            margin:3px 12px ;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        button
+        {
+            color: white;
+            background-color: rgb(109, 109, 212);
+            border-radius: 12px;
+            outline: none;
+            padding: 2px 8px;
+        }
+        </style>
 </head>
 <body>
- 
-<div class="toggler">
-  <div id="effect" class="ui-widget-content ui-corner-all">
-    <h3 class="ui-widget-header ui-corner-all">Effect</h3>
-    <p>
-      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
-    </p>
-  </div>
-</div>
- 
-<select name="effects" id="effectTypes">
-  <option value="blind">Blind</option>
-  <option value="bounce">Bounce</option>
-  <option value="clip">Clip</option>
-  <option value="drop">Drop</option>
-  <option value="explode">Explode</option>
-  <option value="fade">Fade</option>
-  <option value="fold">Fold</option>
-  <option value="highlight">Highlight</option>
-  <option value="puff">Puff</option>
-  <option value="pulsate">Pulsate</option>
-  <option value="scale">Scale</option>
-  <option value="shake">Shake</option>
-  <option value="size">Size</option>
-  <option value="slide">Slide</option>
-  <option value="transfer">Transfer</option>
-</select>
- 
-<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
- 
- 
+    <h1>Goverment Engineering College Ajmer</h1>
+    <ul>
+        <li><a class="a1" href="home1.html">Home</a></li>
+        <li><a class="a1" href="Library.html">Library</a></li>
+        <li><a class="a1" href="List.php">List</a></li>
+        <li><a class="a1" href="#">Contact Us</a></li>
+        <input id="input1"type="text" />
+        <button id="button1"type="sumbit">Search</button>
+    </ul>
+    <h1>Registration form for Allot Book </h1><hr>
+    <h4><span>*</span>Please Fill Details Correctly</h4>
+    
+    <form action="submitform.php" method="POST">
+        <label><span>*</span>Name</label>
+        <input name="name" type="text" required/><br>
+        <label><span>*</span>College Id</label>
+        <input name="clgid" type="text" required/><br>
+        <label><span>*</span>Book Name</label>
+        <input name="bookname" type="text" required/>
+        <label><span>*</span>BooId</label>
+        <input name="bookid" type="text" required/>
+        <label><span>*</span>Book Allot Date</label>
+        <input name="bookallotdate" type="date" required/>
+        <label><span>*</span>Submission Date</label>
+        <input name="submission" type="date" required/><br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

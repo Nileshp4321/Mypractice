@@ -1,0 +1,96 @@
+.maincon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 30rem;
+    background-image: linear-gradient(to top, rgb(67, 93, 196), rgb(245, 245, 245), rgb(67, 93, 196));
+    border-radius: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    outline: none;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to right, rgb(245, 245, 245));
+}
+input:hover{
+   transform: scale(1.02);
+}
+
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+button {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 6.5rem;
+    margin-top: 0.7rem;
+    opacity: 0.9;
+    color: rgb(7, 7, 7);
+    background-image: linear-gradient(to bottom, rgb(67, 93, 196), rgb(245, 247, 255));
+    width: 10rem;
+    border: 0.01rem solid black;
+    border-radius: 0.5rem;
+}
+button:hover{
+   transform: scale(1.09);
+}
+
+#divresult {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+#divresult h3 {
+    visibility: visible;
+}
+
+#buttonr {
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    background-image: linear-gradient(to right, rgb(252, 252, 252), rgb(67, 93, 196), );
+}
+
+.optionss {
+    background-color: rgb(171, 181, 219);
+}
+
+.options {
+    background-color: rgb(171, 181, 219);
+}
+
+.rdbtn1:hover,
+.rdbtn2:hover {
+    transform: scale(1.5);
+}
+
+#convert {
+    display: flex;
+    flex-direction: row;
+}
+
+.upper,
+.down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

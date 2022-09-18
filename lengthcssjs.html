@@ -1,0 +1,274 @@
+<style>
+    .maincon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+        height: 30rem;
+        background-image: linear-gradient(to top, rgb(67, 93, 196), rgb(245, 245, 245), rgb(67, 93, 196));
+        border-radius: 0.5rem;
+    }
+
+    input {
+        padding: 0.5rem;
+        margin: 0.2rem;
+        outline: none;
+        border-radius: 0.5rem;
+        background-image: linear-gradient(to right, rgb(245, 245, 245));
+    }
+    input:hover{
+       transform: scale(1.02);
+   }
+
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    button {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-left: 6.5rem;
+        margin-top: 0.7rem;
+        opacity: 0.9;
+        color: rgb(7, 7, 7);
+        background-image: linear-gradient(to bottom, rgb(67, 93, 196), rgb(245, 247, 255));
+        width: 10rem;
+        border: 0.01rem solid black;
+        border-radius: 0.5rem;
+    }
+   button:hover{
+       transform: scale(1.09);
+   }
+
+    #divresult {
+        display: flex;
+        justify-content: center;
+        visibility: hidden;
+
+    }
+
+    #divresult h3 {
+        visibility: visible;
+    }
+
+    #buttonr {
+        display: flex;
+        justify-content: center;
+    }
+
+    select {
+        border-radius: 0.2rem;
+        padding: 0.3rem;
+        background-image: linear-gradient(to right, rgb(252, 252, 252), rgb(67, 93, 196), );
+    }
+
+    .optionss {
+        background-color: rgb(171, 181, 219);
+    }
+
+    .options {
+        background-color: rgb(171, 181, 219);
+    }
+
+    .rdbtn1:hover,
+    .rdbtn2:hover {
+        transform: scale(1.5);
+    }
+
+    #convert {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .upper,
+    .down {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<script>
+
+    function Convert() {
+
+        let finput = document.getElementById('finput').value;
+        let rdbtn1 = document.getElementsByClassName('rdbtn1');
+        let rdbtn2 = document.getElementsByClassName('rdbtn2');
+        if (rdbtn1[0].checked) {
+            if (rdbtn2[0].checked) {
+                document.getElementById('sinput').value = 1 * finput + "km";
+            } else
+                if (rdbtn2[1].checked) {
+                    document.getElementById('sinput').value = 1000 * finput + "m";
+                } else
+                    if (rdbtn2[2].checked) {
+                        document.getElementById('sinput').value = 10000 * finput + "dm";
+                    } else
+                        if (rdbtn2[3].checked) {
+                            document.getElementById('sinput').value = 100000 * finput + "cm";
+                        } else
+                            if (rdbtn2[4].checked) {
+                                document.getElementById('sinput').value = 1000000 * finput + "mm";
+                            } else
+                                if (rdbtn2[5].checked) {
+                                    document.getElementById('sinput').value = 1000000000 * finput + "μm";
+                                } else
+                                    if (rdbtn2[6].checked) {
+                                        document.getElementById('sinput').value = 1000000000000 * finput + "nm";
+                                    }
+        }
+        else
+            if (rdbtn1[1].checked) {
+                if (rdbtn2[0].checked) {
+                    document.getElementById('sinput').value = finput / 1000 + "km";
+                } else
+                    if (rdbtn2[1].checked) {
+                        document.getElementById('sinput').value = 1 * finput + "m";
+                    } else
+                        if (rdbtn2[2].checked) {
+                            document.getElementById('sinput').value = 10 * finput + "dm";
+                        } else
+                            if (rdbtn2[3].checked) {
+                                document.getElementById('sinput').value = 100 * finput + "cm";
+                            } else
+                                if (rdbtn2[4].checked) {
+                                    document.getElementById('sinput').value = 1000 * finput + "mm";
+                                } else
+                                    if (rdbtn2[5].checked) {
+                                        document.getElementById('sinput').value = 1000000 * finput + "μm";
+                                    } else
+                                        if (rdbtn2[6].checked) {
+                                            document.getElementById('sinput').value = 1000000000 * finput + "nm";
+                                        }
+            }
+            else
+                if (rdbtn1[2].checked) {
+                    if (rdbtn2[0].checked) {
+                        document.getElementById('sinput').value = finput / 10000 + "km";
+                    } else
+                        if (rdbtn2[1].checked) {
+                            document.getElementById('sinput').value = finput / 10 + "m";
+                        } else
+                            if (rdbtn2[2].checked) {
+                                document.getElementById('sinput').value = 1 * finput + "dm";
+                            } else
+                                if (rdbtn2[3].checked) {
+                                    document.getElementById('sinput').value = 10 * finput + "cm";
+                                } else
+                                    if (rdbtn2[4].checked) {
+                                        document.getElementById('sinput').value = 100 * finput + "mm";
+                                    } else
+                                        if (rdbtn2[5].checked) {
+                                            document.getElementById('sinput').value = 100000 * finput + "μm";
+                                        } else
+                                            if (rdbtn2[6].checked) {
+                                                document.getElementById('sinput').value = 100000000 * finput + "nm";
+                                            }
+                }
+                else
+                    if (rdbtn1[3].checked) {
+                        if (rdbtn2[0].checked) {
+                            document.getElementById('sinput').value = finput / 100000 + "km";
+                        } else
+                            if (rdbtn2[1].checked) {
+                                document.getElementById('sinput').value = finput / 100 + "m";
+                            } else
+                                if (rdbtn2[2].checked) {
+                                    document.getElementById('sinput').value = finput / 10 + "dm";
+                                } else
+                                    if (rdbtn2[3].checked) {
+                                        document.getElementById('sinput').value = 1 * finput + "cm";
+                                    } else
+                                        if (rdbtn2[4].checked) {
+                                            document.getElementById('sinput').value = 10 * finput + "mm";
+                                        } else
+                                            if (rdbtn2[5].checked) {
+                                                document.getElementById('sinput').value = 100000 * finput + "μm";
+                                            } else
+                                                if (rdbtn2[6].checked) {
+                                                    document.getElementById('sinput').value = 100000000 * finput + "nm";
+                                                }
+                    }
+                    else
+                        if (rdbtn1[4].checked) {
+                            if (rdbtn2[0].checked) {
+                                document.getElementById('sinput').value = finput / 1000000 + "km";
+                            } else
+                                if (rdbtn2[1].checked) {
+                                    document.getElementById('sinput').value = finput / 1000 + "m";
+                                } else
+                                    if (rdbtn2[2].checked) {
+                                        document.getElementById('sinput').value = finput / 100 + "dm";
+                                    } else
+                                        if (rdbtn2[3].checked) {
+                                            document.getElementById('sinput').value = finput / 10 + "cm";
+                                        } else
+                                            if (rdbtn2[4].checked) {
+                                                document.getElementById('sinput').value = 1 * finput + "mm";
+                                            } else
+                                                if (rdbtn2[5].checked) {
+                                                    document.getElementById('sinput').value = 10000 * finput + "μm";
+                                                } else
+                                                    if (rdbtn2[6].checked) {
+                                                        document.getElementById('sinput').value = 1000000 * finput + "nm";
+                                                    }
+                        }
+                        else
+                            if (rdbtn1[5].checked) {
+                                if (rdbtn2[0].checked) {
+                                    document.getElementById('sinput').value = finput / 1000000000 + "km";
+                                } else
+                                    if (rdbtn2[1].checked) {
+                                        document.getElementById('sinput').value = finput / 1000000 + "m";
+                                    } else
+                                        if (rdbtn2[2].checked) {
+                                            document.getElementById('sinput').value = finput / 100000 + "dm";
+                                        } else
+                                            if (rdbtn2[3].checked) {
+                                                document.getElementById('sinput').value = finput / 10000 + "cm";
+                                            } else
+                                                if (rdbtn2[4].checked) {
+                                                    document.getElementById('sinput').value = finput / 1000 + "mm";
+                                                } else
+                                                    if (rdbtn2[5].checked) {
+                                                        document.getElementById('sinput').value = 1 * finput + "μm";
+                                                    } else
+                                                        if (rdbtn2[6].checked) {
+                                                            document.getElementById('sinput').value = 1000 * finput + "nm";
+                                                        }
+                            }
+                            else
+                                if (rdbtn1[6].checked) {
+                                    if (rdbtn2[0].checked) {
+                                        document.getElementById('sinput').value = finput / 1000000000000 + "km";
+                                    } else
+                                        if (rdbtn2[1].checked) {
+                                            document.getElementById('sinput').value = finput / 1000000000 + "m";
+                                        } else
+                                            if (rdbtn2[2].checked) {
+                                                document.getElementById('sinput').value = finput / 100000000 + "dm";
+                                            } else
+                                                if (rdbtn2[3].checked) {
+                                                    document.getElementById('sinput').value = finput / 10000000 + "cm";
+                                                } else
+                                                    if (rdbtn2[4].checked) {
+                                                        document.getElementById('sinput').value = finput / 1000000 + "mm";
+                                                    } else
+                                                        if (rdbtn2[5].checked) {
+                                                            document.getElementById('sinput').value = finput / 10000 + "μm";
+                                                        } else
+                                                            if (rdbtn2[6].checked) {
+                                                                document.getElementById('sinput').value = 1 * finput + "nm";
+                                                            }
+                                }
+    }
+</>
